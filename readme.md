@@ -8,7 +8,7 @@
 
 ` "scripts": { "compile:sass": "node-sass sass/main.scss css/style.css -w" },`
 
-run `npm run compile-sass`
+run `npm run compile:sass`
 
 put `-w` to compile automatically.
 
