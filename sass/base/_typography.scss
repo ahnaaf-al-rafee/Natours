@@ -37,3 +37,24 @@ body {
     /* animation-delay: 0.5s; */
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  display: inline-block; // it make sure that the display is not the full line but only where the word finishes
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text; // cuts the background where the image is .
+  color: transparent; // if you don't add these it will not work.
+  letter-spacing: 0.2rem;
+  transition: 0.2s all;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.4px);
+  }
+}
