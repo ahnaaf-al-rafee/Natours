@@ -4,7 +4,6 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: $color-grey-dark;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -25,6 +24,11 @@ body {
     animation: moveInLeft 1s ease-in;
 
     /* animation-iteration-count: infinite; */
+
+    @include respond(phone) {
+      font-family: 5rem;
+      letter-spacing: 1rem;
+    }
   }
 
   &--sub {
@@ -35,6 +39,10 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     /* animation-delay: 0.5s; */
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -52,6 +60,14 @@ body {
   color: transparent; // if you don't add these it will not work.
   letter-spacing: 0.2rem;
   transition: 0.2s all;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
